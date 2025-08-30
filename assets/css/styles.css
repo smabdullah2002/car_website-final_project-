@@ -131,8 +131,8 @@ img {
 }
 
 .shape__smaller {
-  width: 180px;
-  height: 18px;
+  width: 150px;
+  height: 150px;
   filter: blur(64px);
 }
 
@@ -264,7 +264,10 @@ img {
 
 .home__title {
   font-size: var(--h3-font-size);
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.3rem;
+}
+.home__elec i {
+  color: var(--white-color);
 }
 
 .home__elec {
@@ -310,7 +313,7 @@ img {
 }
 
 .home__car-icon {
-  background-color: var(--container-color);
+  background-color: rgb(22, 20, 20);
   border-radius: 50%;
   padding: 0.375rem;
   display: inline-flex;
@@ -444,9 +447,9 @@ img {
 
 .popular__card {
   position: relative;
-  width: 238px;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
+  width: 235px;
+  background: transparent;
+  backdrop-filter: blur(15px);
   padding: 2rem 1.5rem 1.5rem;
   border-radius: 1rem;
   margin-bottom: 3.5rem;
@@ -523,117 +526,126 @@ img {
 }
 
 /*=========== features========= */
- .features {
-            overflow: hidden;
-            position: relative;
-            min-height: 100vh;
-        }
+.features {
+  overflow: hidden;
+  position: relative;
+  min-height: 100vh;
+}
 
-        .features__container {
-            padding-top: 2rem;
-            grid-template-columns: 285px;
-            justify-content: center;
-            position: relative;
-            height: 80vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+.features__container {
+  padding-top: 2rem;
+  grid-template-columns: 285px;
+  justify-content: center;
+  position: relative;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-        .features__group {
-            display: grid;
-            position: relative;
-            z-index: 10;
-            width: 600px;
-            height: 400px;
-            justify-content: center;
-            align-items: center;
-        }
+.features__group {
+  display: grid;
+  position: relative;
+  z-index: 10;
+  width: 600px;
+  height: 400px;
+  justify-content: center;
+  align-items: center;
+}
 
-        .features__img {
-            width: 220px;
-            justify-self: center;
-            align-self: center;
-            left: 20%;
-            bottom: 15%;
-            z-index: 5;
-            position: relative;
-            filter: drop-shadow(0 20px 40px rgba(255, 255, 255, 0.1));
-        }
+.features__img {
+  width: 220px;
+  justify-self: center;
+  align-self: center;
+  left: 20%;
+  bottom: 15%;
+  z-index: 5;
+  position: relative;
+  filter: drop-shadow(0 20px 40px rgba(255, 255, 255, 0.1));
+}
 
-        .features__map {
-            max-width: initial;
-            width: 600px;
-            position: absolute;
-            top: 50%;
-            left: 60%;
-            transform: translate(-50%, -50%) rotate(-22deg);
-            z-index: 1;
-            opacity: 0.6;
-            pointer-events: none;
-        }
+.features__map {
+  max-width: initial;
+  width: 600px;
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  transform: translate(-50%, -50%) rotate(-22deg);
+  z-index: 1;
+  opacity: 0.6;
+  pointer-events: none;
+}
 
-        .features__card {
-            width: 112px;
-            background-color: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(18px);
-            border-radius: 1.25rem;
-            padding: 0.75rem 1rem;
-            text-align: center;
-            color: var(--title-color);
-            position: absolute;
-            z-index: 15;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s ease;
-        }
+.features__card {
+  width: 112px;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(18px);
+  border-radius: 1.25rem;
+  padding: 0.75rem 1rem;
+  text-align: center;
+  color: var(--title-color);
+  position: absolute;
+  z-index: 15;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
 
-        .features__card:hover {
-            transform: translateY(-5px);
-        }
+.features__card:hover {
+  transform: translateY(-5px);
+}
 
-        .features__card-1 {
-            top: 4rem;
-            left: 8rem;
-        }
+.features__card-1 {
+  top: 4rem;
+  left: 8rem;
+}
 
-        .features__card-2 {
-            bottom: 220px;
-            right: 3.5rem;
-        }
+.features__card-2 {
+  bottom: 220px;
+  right: 3.5rem;
+}
 
-        .features__card-3 {
-            left:10rem;
-            bottom: 2rem;
-        }
+.features__card-3 {
+  left: 10rem;
+  bottom: 2rem;
+}
 
-        .features__card-title {
-            font-size: var(--h3-font-size);
-            margin-bottom: 0.25rem;
-            font-weight: 700;
-            color: #ffffff;
-        }
+.features__card-title {
+  font-size: var(--h3-font-size);
+  margin-bottom: 0.25rem;
+  font-weight: 700;
+  color: #ffffff;
+}
 
-        .features__card-description {
-            font-size: var(--smaller-font-size);
-            line-height: 1.2;
-            opacity: 0.5;
-        }
+.features__card-description {
+  font-size: var(--smaller-font-size);
+  line-height: 1.2;
+  opacity: 0.5;
+}
 
-        .features__map-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 95%;
-            height: 95%;
-            z-index: 1;
-            opacity: 0.1;
-            background: linear-gradient(45deg, 
-                transparent 0%, 
-                rgba(0, 100, 200, 0.3) 20%, 
-                rgba(0, 150, 255, 0.4) 40%, 
-                rgba(0, 100, 200, 0.3) 60%, 
-                transparent 80%
-            ); 
-            clip-path: polygon(20% 0%, 80% 0%, 100% 30%, 90% 70%, 60% 100%, 10% 80%, 0% 40%);
-            transform: rotate(-22deg);
-        }
+.features__map-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 95%;
+  height: 95%;
+  z-index: 1;
+  opacity: 0.1;
+  background: linear-gradient(
+    45deg,
+    transparent 0%,
+    rgba(0, 100, 200, 0.3) 20%,
+    rgba(0, 150, 255, 0.4) 40%,
+    rgba(0, 100, 200, 0.3) 60%,
+    transparent 80%
+  );
+  clip-path: polygon(
+    20% 0%,
+    80% 0%,
+    100% 30%,
+    90% 70%,
+    60% 100%,
+    10% 80%,
+    0% 40%
+  );
+  transform: rotate(-22deg);
+}

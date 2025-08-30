@@ -29,10 +29,9 @@ const linkAction = () => {
 };
 navLink.forEach((n) => n.addEventListener("click", linkAction));
 
-/*=============== CHANGE BACKGROUND HEADER ===============*/
+
 const scrollHeader = () => {
   const header = document.getElementById("header");
-  // Add a class if the bottom offset is greater than 50 of the viewport
   this.scrollY >= 50
     ? header.classList.add("scroll-header")
     : header.classList.remove("scroll-header");
@@ -52,3 +51,25 @@ const swiperPopular = new Swiper(".popular__container", {
     1024: { slidesPerView: 3 }, 
   },
 });
+
+
+const sr=ScrollReveal({
+  origin:'top',
+  distance: '60px',
+  duration:2500,
+  delay: 400,
+
+})
+sr.reveal('.home__title')
+sr.reveal('.popular__container')
+sr.reveal('.features__img')
+sr.reveal('.home__subtitle', {delay: 500})
+sr.reveal('.home__elec', {delay: 600})
+sr.reveal('.home__img', {delay: 800})
+sr.reveal('.home__car-data', {delay: 800, interval: 80, origin:'bottom'})
+sr.reveal('.home__button', {delay: 900, origin:'bottom'})
+sr.reveal('.about__group', { origin:'left'})
+sr.reveal('.about__data', { origin:'right'})
+sr.reveal('.features__map', { delay:600,origin:'bottom'})
+sr.reveal('.features__card', { interval:300})
+
