@@ -73,3 +73,28 @@ sr.reveal('.about__data', { origin:'right'})
 sr.reveal('.features__map', { delay:600,origin:'bottom'})
 sr.reveal('.features__card', { interval:300})
 
+
+
+let mixerFeatured = mixitup('.featured__content', {
+    selectors: {
+        target: '.featured__card' // Target selector for filterable items
+    },
+    animation: {
+        duration: 500,              // Animation speed in ms
+        effects: 'fade scale(0.5)', // Animation effects
+        easing: 'ease-in-out'       // Easing function
+    }
+});
+
+const linkFeatured = document.querySelectorAll('.featured__item')
+
+function activeFeatured()
+{
+  linkedFeatured.forEach(l=>l.classList.remove('active-featured'))
+  this.classList.add('active-featured')
+}
+
+linkFeatured.forEach(l=>l.addEventListener('click', activeFeatured))
+
+
+
