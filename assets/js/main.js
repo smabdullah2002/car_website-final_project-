@@ -29,7 +29,6 @@ const linkAction = () => {
 };
 navLink.forEach((n) => n.addEventListener("click", linkAction));
 
-
 const scrollHeader = () => {
   const header = document.getElementById("header");
   this.scrollY >= 50
@@ -39,81 +38,76 @@ const scrollHeader = () => {
 window.addEventListener("scroll", scrollHeader);
 
 const swiperPopular = new Swiper(".popular__container", {
-  slidesPerView: 3, 
-  spaceBetween: 20, 
-  loop: true, 
+  slidesPerView: 3,
+  spaceBetween: 20,
+  loop: true,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
   },
   breakpoints: {
-    768: { slidesPerView: 2 }, 
-    1024: { slidesPerView: 3 }, 
+    0: { slidesPerView: 1 },
+    768: { slidesPerView: 2 },
+    1024: { slidesPerView: 3 },
   },
 });
 
-
-const sr=ScrollReveal({
-  origin:'top',
-  distance: '60px',
-  duration:2500,
+const sr = ScrollReveal({
+  origin: "top",
+  distance: "60px",
+  duration: 2500,
   delay: 400,
+});
+sr.reveal(".home__title");
+sr.reveal(".popular__container");
+sr.reveal(".features__img");
+sr.reveal(".home__subtitle", { delay: 500 });
+sr.reveal(".home__elec", { delay: 600 });
+sr.reveal(".home__img", { delay: 800 });
+sr.reveal(".home__car-data", { delay: 800, interval: 80, origin: "bottom" });
+sr.reveal(".home__button", { delay: 900, origin: "bottom" });
+sr.reveal(".about__group", { origin: "left" });
+sr.reveal(".about__data", { origin: "right" });
+sr.reveal(".features__map", { delay: 600, origin: "bottom" });
+sr.reveal(".features__card", { interval: 300 });
+sr.reveal(".featured__card", { interval: 200 });
 
-})
-sr.reveal('.home__title')
-sr.reveal('.popular__container')
-sr.reveal('.features__img')
-sr.reveal('.home__subtitle', {delay: 500})
-sr.reveal('.home__elec', {delay: 600})
-sr.reveal('.home__img', {delay: 800})
-sr.reveal('.home__car-data', {delay: 800, interval: 80, origin:'bottom'})
-sr.reveal('.home__button', {delay: 900, origin:'bottom'})
-sr.reveal('.about__group', { origin:'left'})
-sr.reveal('.about__data', { origin:'right'})
-sr.reveal('.features__map', { delay:600,origin:'bottom'})
-sr.reveal('.features__card', { interval:300})
-sr.reveal('.featured__card', { interval:200})
-
-
-
-let mixerFeatured = mixitup('.featured__content', {
-    selectors: {
-        target: '.featured__card' // Target selector for filterable items
-    },
-    animation: {
-        duration: 500,              // Animation speed in ms
-        effects: 'fade scale(0.5)', // Animation effects
-        easing: 'ease-in-out'       // Easing function
-    }
+let mixerFeatured = mixitup(".featured__content", {
+  selectors: {
+    target: ".featured__card", // Target selector for filterable items
+  },
+  animation: {
+    duration: 500, // Animation speed in ms
+    effects: "fade scale(0.5)", // Animation effects
+    easing: "ease-in-out", // Easing function
+  },
 });
 
-const linkFeatured = document.querySelectorAll('.featured__item')
+const linkFeatured = document.querySelectorAll(".featured__item");
 
-function activeFeatured()
-{
-  linkedFeatured.forEach(l=>l.classList.remove('active-featured'))
-  this.classList.add('active-featured')
+function activeFeatured() {
+  linkFeatured.forEach((l) => l.classList.remove("active-featured"));
+  this.classList.add("active-featured");
 }
 
-linkFeatured.forEach(l=>l.addEventListener('click', activeFeatured))
+linkFeatured.forEach((l) => l.addEventListener("click", activeFeatured));
 
 const learnMoreBtn = document.getElementById("learnMoreBtn");
 const aboutMore = document.getElementById("aboutMore");
 
 learnMoreBtn.addEventListener("click", () => {
-if (aboutMore.style.display === "none") {
-aboutMore.style.display = "block"; // show content
-sr.reveal("#aboutMore", { // ScrollReveal for new content
-duration: 1000,
-origin: "bottom",
-distance: "50px",
-easing: "ease-in-out"
+  if (aboutMore.style.display === "none") {
+    aboutMore.style.display = "block"; // show content
+    sr.reveal("#aboutMore", {
+      // ScrollReveal for new content
+      duration: 1000,
+      origin: "bottom",
+      distance: "50px",
+      easing: "ease-in-out",
+    });
+    learnMoreBtn.textContent = "Show Less";
+  } else {
+    aboutMore.style.display = "none"; // hide content
+    learnMoreBtn.textContent = "Know more";
+  }
 });
-learnMoreBtn.textContent = "Show Less";
-} else {
-aboutMore.style.display = "none"; // hide content
-learnMoreBtn.textContent = "Know more";
-}
-});
-
-
