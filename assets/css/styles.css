@@ -192,7 +192,7 @@ img {
   cursor: pointer;
 }
 
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 650px) {
   .nav__menu {
     position: fixed;
     background-color: gray;
@@ -786,10 +786,12 @@ font-size: 1.25rem;
   object-fit: cover;   /* cover the section */
   object-position: center;
   z-index: -1;         /* keep it behind content */
+  border-radius: 30px;
 }
 
 .offer__data {
   position: relative;
+  left: 20px;
   text-align: center;  /* fixed */
   font-size: 2rem;     /* added for visibility */
   color: #fff;         /* make text visible over bg */
@@ -799,7 +801,7 @@ font-size: 1.25rem;
 .offer__description {
   margin-bottom: 3rem;
   font-size: 1rem;
-  color: #f1f1f1;      /* lighter text for readability */
+  color: #f1f1f1;      
 }
 
 .offer__img {
@@ -817,16 +819,15 @@ font-size: 1.25rem;
 .logos__container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); 
-  gap: 2rem;             /* space between logos */
-  align-items: center;   /* center logos vertically */
-  justify-items: center; /* center logos horizontally */
+  gap: 2rem;        
+  display: flex;     
   padding: 2rem 0;
 }
 
 .logos__content {
-  display: flex;
   align-items: center;
   justify-content: center;
+  transform: translate(50%, 0%);
 }
 
 .logos__img {
@@ -1054,26 +1055,34 @@ font-size: 1.25rem;
     width: 180px;
     margin: .75rem 0 1.25rem 2rem;
   }
+
+  /* features */
   .features__container{
     padding: 2rem 0 3rem;
+    display: flex;
 
   }
   .features__img{
     width: 200px;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-20%,0%);
   }
   .features__card{
     width: 127px;
     padding: .75rem 2.5rem;
   }
   .features__card-1{
-    left: -1rem;
+    left: 8.5rem;
+    
   }
   .features__card-2{
-    right: -2.5rem;
+    bottom: 12rem;
+    right: 8rem;
   }
   .features__card-3{
-    bottom: 7rem;
-    left: -1rem;
+    
+    left: 7rem;
   }
 
   .features__map{
@@ -1259,6 +1268,11 @@ z-index: 1;
   .footer__copy{
     margin-top: 8rem;
     padding-bottom: 1rem;
+    font-size: var(--smaller-font-size);
+    color: var(--text-color-light);
+    text-align: center;
+    border-top: 1px solid var(--text-color-light);
+    
   }
 
   .scrollup{

@@ -72,6 +72,7 @@ sr.reveal('.about__group', { origin:'left'})
 sr.reveal('.about__data', { origin:'right'})
 sr.reveal('.features__map', { delay:600,origin:'bottom'})
 sr.reveal('.features__card', { interval:300})
+sr.reveal('.featured__card', { interval:200})
 
 
 
