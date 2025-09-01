@@ -394,6 +394,17 @@ img {
   height: auto;
   border-radius: 20px;
 }
+.about__more {
+overflow: hidden;
+transition: max-height 0.5s ease;
+margin-bottom: 15px;
+}
+.about__more.show {
+max-height: 300px; /* adjust based on content height */
+}
+.abtdes{
+margin-bottom: 15px;
+}
 
 .about__card {
   position: absolute;

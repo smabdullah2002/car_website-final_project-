@@ -97,5 +97,23 @@ function activeFeatured()
 
 linkFeatured.forEach(l=>l.addEventListener('click', activeFeatured))
 
+const learnMoreBtn = document.getElementById("learnMoreBtn");
+const aboutMore = document.getElementById("aboutMore");
+
+learnMoreBtn.addEventListener("click", () => {
+if (aboutMore.style.display === "none") {
+aboutMore.style.display = "block"; // show content
+sr.reveal("#aboutMore", { // ScrollReveal for new content
+duration: 1000,
+origin: "bottom",
+distance: "50px",
+easing: "ease-in-out"
+});
+learnMoreBtn.textContent = "Show Less";
+} else {
+aboutMore.style.display = "none"; // hide content
+learnMoreBtn.textContent = "Know more";
+}
+});
 
 
